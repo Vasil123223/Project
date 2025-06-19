@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Игра: Порядок чисел</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+    table {
+      border-collapse: collapse;
+      margin: 0 auto;
+    }
+    td {
+      border: 1px solid #333;
+      padding: 20px;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      font-size: 20px;
+      transition: background-color 0.3s;
+    }
+    td.active {
+      background-color: lightgreen;
+    }
+    .info {
+      margin-bottom: 20px;
+    }
+    #gameOver {
+      display: none;
+      color: red;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="info">
+    🧮 Очки: <span id="score">0</span> |
+    🏆 Рекорд: <span id="highscore">0</span> |
+    ⏱️ Время: <span id="timer">30</span>
+  </div>
+
+  <div id="game">
+    <table class="field"></table>
+  </div>
+
+  <div id="gameOver">⛔ Игра окончена!</div>
+  <button onclick="location.reload()">Сыграть снова</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
